@@ -1,0 +1,57 @@
+<html>
+<head>
+<script>
+
+ 	var arr=new Array();
+
+	function addFun()
+		{
+			arr.push(document.getElementById('p1').value);
+			document.getElementById('p1').value='';
+			dis();
+		}
+function dis()
+{
+ var v=0;
+for (var l=0;l<arr.length;l++) 
+	{ 
+		v += arr[l]; 
+		
+		
+	 
+	} 
+
+	 
+	document.getElementById('display').innerHTML=v;
+
+}
+
+function display()
+{
+
+
+var str='';
+
+
+str="lenght is " +arr.length + "<br />";
+	for (var i=0;i<arr.length;i++) 
+	{ 
+		str += i + ':'+arr[i] + "<br >"; 
+	} 
+
+	 
+	document.getElementById('display').innerHTML=str;
+	
+	
+}
+</script>
+<body>
+<form action="" method="get">
+<label>enter</label>
+<input type="text" id="p1"/>
+<input type="button" id ="p2" value="add" onclick="addFun()"/>
+<div id=display></div>
+<div id=dis></div>
+<form>
+</body>
+</html>
